@@ -1,0 +1,42 @@
+.loading {
+    @include flex(center, center);
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &__dots {
+        margin-left: 5px;
+        padding-top: 7px;
+        @include flex(flex-end, flex-start);
+
+        &__item {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 100rem;
+            background-color: $main-color;
+            margin: 0 2px;
+            animation: animate 1.2s linear infinite;
+
+            &:nth-child(2) {
+                animation-delay: 0.4s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.8s;
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    20% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}

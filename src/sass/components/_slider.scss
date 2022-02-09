@@ -1,0 +1,56 @@
+.swiper-container {
+    width: 100%;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #ffffff !important;
+        background-color: #000000 !important;
+        width: 40px !important;
+        height: 40px !important;
+
+        @include mobile {
+            width: 30px !important;
+            height: 30px !important;
+        }
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 18px !important;
+
+        @include mobile {
+            font-size: 16px !important;
+        }
+    }
+
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        pointer-events: unset !important;
+    }
+
+    .swiper-wrapper {
+        transition: all 0.5s ease !important;
+    }
+
+    .swiper-slide {
+        width: 25%;
+
+        @include smallScreen {
+            .swiper-slide {
+                width: 33.33333%;
+            }
+        }
+
+        @include desktop {
+            .swiper-slide {
+                width: 50%;
+            }
+        }
+
+        @include mobile {
+            .swiper-slide {
+                width: 100%;
+            }
+        }
+    }
+}

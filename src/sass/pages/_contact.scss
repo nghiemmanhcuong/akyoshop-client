@@ -1,0 +1,126 @@
+.contact {
+    &__header {
+        text-align: center;
+        max-width: 534px;
+        margin: 50px auto 30px;
+
+        &__title {
+            font-size: 2.6rem;
+            margin-bottom: 5px;
+        }
+
+        &__desc {
+            font-size: 1.6rem;
+            color: $gray-primary;
+        }
+    }
+
+    &__help {
+        &__header {
+            margin-bottom: 30px;
+
+            &__title {
+                font-size: 1.8rem;
+                margin-bottom: 5px;
+            }
+
+            &__desc {
+                font-size: 1.5rem;
+                color: $gray-primary;
+                max-width: 500px;
+                display: block;
+            }
+        }
+
+        &__content {
+            &__item {
+                margin-top: 15px;
+
+                &__title {
+                    font-size: 1.2rem;
+                    color: $gray-primary;
+                    margin-bottom: 10px;
+                    font-style: italic;
+
+                    span {
+                        color: $main-color;
+                        font-weight: 600;
+                        font-size: 1.4rem;
+                        font-style: normal;
+                    }
+                }
+
+                &__group {
+                    & > * ~ * {
+                        margin-top: 5px;
+                    }
+
+                    &__input {
+                        gap: 0 5px;
+                        @include flex(center, flex-start);
+                        cursor: pointer;
+
+                        span {
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    &__select {
+                        width: 100%;
+                        border: 1px solid #ccc;
+                        padding: 10px 5px;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__info {
+        &__group {
+            margin-bottom: 15px;
+
+            label {
+                display: block;
+                font-size: 1.4rem;
+                color: $main-color;
+                font-weight: 600;
+                font-size: 1.4rem;
+                margin-bottom: 5px;
+
+                span {
+                    color: red;
+                }
+            }
+
+            input,
+            select {
+                width: 100%;
+                border: 1px solid #ccc;
+                padding: 10px 5px;
+                outline: none;
+            }
+        }
+
+        &__button {
+            margin-top: 30px;
+            @include flex(center,center);
+
+            button {
+                width: 60%;
+                padding: 10px 0;
+                background-color:white;
+                color: $main-color;
+                border: 1px solid $main-color;
+                cursor: pointer;
+                font-size: 1.3rem;
+                font-weight: 600;
+
+                &:hover {
+                    background-color:$main-color;
+                    color: white;
+                }
+            }
+        }
+    }
+}

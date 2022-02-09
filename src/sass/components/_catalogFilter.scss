@@ -1,0 +1,146 @@
+.catalog__filter {
+    @include flex(center, space-between);
+
+    &__container {
+        gap: 0 50px;
+        @include flex(center, space-between);
+
+        @include mobile {
+            gap: 0 20px;
+        }
+    }
+
+    &__title {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &__title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            @include flex(center, center);
+            gap: 0 5px;
+            color: $gray-primary;
+            cursor: pointer;
+
+            @include tablet {
+                font-size: 1.3rem;
+            }
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__list {
+            position: absolute;
+            @include flex(center, center);
+            gap: 15px;
+            right: 0;
+            border: 1px solid #cccccc;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            z-index: 99;
+            background-color:white;
+
+            @include tablet {
+                padding: 5px;
+                left: 0;
+                right: unset;
+            }
+
+            @include mobile {
+                gap: 7px;
+            }
+
+            &.size,
+            &.color {
+                transform: scale(0);
+                transition: all 0.5s ease;
+
+                &.active {
+                    transform: scale(1);
+                }
+            }
+
+            &__item.size {
+                width: 30px;
+                height: 30px;
+                font-size: 1.2rem;
+                @include flex(center, center);
+                border: 1px solid #ccc;
+                cursor: pointer;
+
+                @include tablet {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &.active {
+                    color: white;
+                    background-color: $main-color;
+                }
+            }
+
+            &__item.color {
+                width: 30px;
+                height: 30px;
+                @include flex(center, center);
+                border-radius: 50%;
+                border: 1px solid #ccc;
+                cursor: pointer;
+                color: rgb(31, 224, 31);
+
+                @include tablet {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    &__price {
+        position: relative;
+
+        &__list {
+            position: absolute;
+            right: 0;
+            width: max-content;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transform: scale(0);
+            transition: all 0.5s ease;
+            z-index: 99;
+            background-color:white;
+
+            @include tablet {
+                padding: 5px;
+            }
+
+            &.active {
+                transform: scale(1);
+            }
+
+            &__item {
+                font-size: 1.3rem;
+                @include flex(center, flex-start);
+                gap: 0 5px;
+
+                @include tablet {
+                    font-size: 1.2rem;
+                }
+            }
+
+            & > * ~ * {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}

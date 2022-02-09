@@ -1,0 +1,79 @@
+.menu {
+    width: 40%;
+
+    @include smallScreen {
+        width: 45%;
+    }
+
+    @include desktop {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40vw;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 100;
+        transition: all 0.5s ease;
+
+        &.active {
+            right: 0;
+        }
+    }
+
+    @include tablet {
+        width: 50vw;
+    }
+
+    &__list {
+        @include flex(center, space-between);
+
+        @include desktop {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__item {
+            &.mobile {
+                display: none;
+
+                @include desktop {
+                    display: block;
+                }
+            }
+
+            @include desktop {
+                width: 100%;
+            }
+
+            &__link {
+                font-size: 1.6rem;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: $gray-opacity;
+
+                @include desktop {
+                    color: $main-color;
+                    font-size: 2rem;
+                    display: block;
+                    padding: 25px;
+                    transition: all 0.3s ease;
+                }
+
+                @include mobile {
+                    font-size: 1.6rem;
+                    padding: 18px;
+                }
+
+                &:hover,
+                &.active {
+                    color: $main-color;
+
+                    @include desktop {
+                        color: #ffffff;
+                        background-color: #cd031b;
+                    }
+                }
+            }
+        }
+    }
+}

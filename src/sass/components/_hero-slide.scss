@@ -1,0 +1,73 @@
+.hero-slide {
+    position: relative;
+    height: 608px;
+
+    @include desktop {
+        height: 450px;
+    }
+
+    @include tablet {
+        height: 350px;
+    }
+
+    @include mobile {
+        height: 300px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-color:$gray-opacity;
+        z-index: 1;
+        transition: all 0.3s ease;
+        @include flex(center,center);
+        cursor: pointer;
+
+        @include tablet {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include mobile {
+            width: 30px;
+            height: 30px;
+        }
+
+        &:hover {
+            background-color:$main-color;
+        }
+
+        &--left {
+            left: 10px;
+        }
+
+        &--right {
+            right: 10px;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        inset:0;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 100%;
+
+        a {
+            display:block;
+            height: 100%;
+        }
+
+        &__img {
+            height: 100%;
+            max-height: 100%;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}

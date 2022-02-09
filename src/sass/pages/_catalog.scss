@@ -1,0 +1,51 @@
+.catalog {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__category {
+        flex: 1;
+
+        &__title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        &__list {
+            @include tablet {
+                display:grid;
+                grid-template-columns: repeat(3,1fr);
+            }
+
+            &__item {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+                font-weight: 500;
+                color: $gray-primary;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    &__container {
+        flex: 4.5;
+    }
+
+    &__product {
+        margin-top: 30px;
+
+        @include tablet {
+            margin-top: 15px;
+        }
+    }
+}
+

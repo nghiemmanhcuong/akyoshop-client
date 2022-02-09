@@ -1,0 +1,66 @@
+.footer {
+    background-color: $main-color;
+    color: white;
+    padding: 50px 0;
+
+    &__wrapper {
+        max-width:1345px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 40px;
+
+        @include desktop {
+            padding: 0 20px;
+        }
+    
+        @include mobile {
+            padding: 0 10px;
+        }
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    &__block {
+        font-size: 1.1rem;
+
+        @include mobile {
+            font-size: 1.4rem;
+        }
+        
+        &:nth-child(2),
+        &:nth-child(3) {
+            padding-left: 100px;
+
+            @include desktop {
+                padding-left: 30px;
+            }
+
+            @include tablet {
+                padding-left: 0;
+            }
+        }
+
+        &:nth-child(4) {
+            text-align: right;
+
+            @include tablet {
+                text-align: left;
+            }
+        }
+
+        &__item {
+            margin-bottom: 5px;
+
+            &:hover {
+                text-decoration:underline;
+            }
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+}

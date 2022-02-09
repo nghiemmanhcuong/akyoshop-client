@@ -1,0 +1,24 @@
+.hot-selection {
+    margin-top: 5px;
+
+    &__item {
+        &__content {
+            padding: 15px 30px;
+            background-color: #EFEFF4;
+            @include flex(center,space-between);
+
+            @include mobile {
+                padding: 15px 10px;
+            }
+
+            &__title {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+
+            &__btn {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

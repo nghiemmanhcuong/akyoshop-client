@@ -1,0 +1,49 @@
+.section {
+    margin: 50px 0;
+
+    @include desktop {
+        margin: 30px 0;
+    }
+
+    @include mobile {
+        margin: 20px 0;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        color: $main-color;
+        font-size: 34px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include tablet {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            display: block;
+            font-size: 1.4rem;
+        }
+    }
+    &__body {
+        max-width:1345px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 40px;
+
+        @include desktop {
+            padding: 0 20px;
+        }
+    
+        @include mobile {
+            padding: 0 10px;
+        }
+    }
+}

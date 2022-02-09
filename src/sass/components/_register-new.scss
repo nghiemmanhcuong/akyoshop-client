@@ -1,0 +1,106 @@
+.register-new {
+    padding: 50px 0;
+    background-color: #efeff4;
+    flex-direction: column;
+    @include flex(center, center);
+
+    &__header {
+        text-align: center;
+        margin-bottom: 30px;
+
+        &__title {
+            color: $main-color;
+            font-size: 34px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            @include tablet {
+                font-size: 28px;
+            }
+
+            @include mobile {
+                font-size: 25px;
+            }
+        }
+
+        &__desc {
+            font-size: 1.4rem;
+            font-weight: 600;
+
+            @include tablet {
+                font-size: 1.3rem;
+                max-width:300px;
+                display: block;
+            }
+        }
+    }
+
+    &__form {
+        background-color: #ffffff;
+        width: 35%;
+        height: 40px;
+        position: relative;
+        margin-bottom: 40px;
+
+        @include desktop {
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 65%;
+        }
+
+        @include mobile {
+            width: 75%;
+        }
+
+        &__input {
+            border: 1px solid #ccc;
+            outline: none;
+            height: 100%;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 100px;
+            font-size: 1.6rem;
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__btn {
+            position:absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            background-color: $main-color;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+
+            @include mobile {
+                width: 65px;
+            }
+        }
+    }
+
+    &__icon {
+        gap: 0 15px;
+        @include flex(center, center);
+
+        &__item {
+            width: 40px;
+            height: 40px;
+            border-radius: 100rem;
+            @include flex(center,center);
+            color: white;
+        }
+    }
+}

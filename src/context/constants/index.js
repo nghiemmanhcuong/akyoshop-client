@@ -1,0 +1,3 @@
+export const SET_AUTH = 'SET_AUTH';
+export const LOGIN_USER = 'LOGIN_USER';
+export const LOCAL_STORE_ACCESS_TOKEN = 'LOCAL_STORE_ACCESS_TOKEN';

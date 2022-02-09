@@ -1,0 +1,51 @@
+.pagination {
+    margin-top: 50px;
+    @include flex(center, center);
+
+    &__number {
+        gap: 0 15px;
+        @include flex(center, center);
+
+        &__item {
+            font-size: 1.4rem;
+            font-weight: 500;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $main-color;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            @include flex(center, center);
+
+            @include desktop {
+                width: 35px;
+                height: 35px;
+                font-size: 1.3rem;
+            }
+
+            @include tablet {
+                width: 30px;
+                height: 30px;
+                font-size: 1.2rem;
+            }
+
+            &.active,
+            &:hover {
+                background-color:$main-color;
+                color: white;
+            }
+
+            &:first-child,
+            &:last-child {
+                &:hover {
+                    color: inherit;
+                    background-color:inherit;
+                }
+
+                &.disabled {
+                    pointer-events: none;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+}

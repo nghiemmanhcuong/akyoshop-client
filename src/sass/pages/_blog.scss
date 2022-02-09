@@ -1,0 +1,25 @@
+.blog {
+    &__header {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        @include flex(center, center);
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $main-color;
+
+            &.event {
+                color: $gray-primary;
+            }
+        }
+
+        &__br {
+            width: 0.5px;
+            height: 18px;
+            background-color: $main-color;
+            margin: 0 15px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.topbar {
+    background-color: black;
+    color: white;
+    padding: 10px 40px;
+
+    @include mobile {
+        text-align: center;
+    }
+
+    &__container {
+        @include flex(center, space-between);
+    }
+
+    &__item {
+        @include mobile {
+            width: 100%;
+            text-align: center;
+
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+
+        &__link {
+            font-size: 1.4rem;
+            gap: 5px;
+            @include flex(center, flex-start);
+
+            @include mobile {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    }
+}

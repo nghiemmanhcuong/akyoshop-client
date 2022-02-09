@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include mobile {
+        font-size: 50%;
+    }
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@each $color, $var in $colors {
+    .bg-#{$color} {
+        background-color: $var;
+    }
+}
+
+@each $var in $numbers {
+    .grid-col-#{$var} {
+        grid-template-columns: repeat($var, 1fr);
+    }
+}
+
+@each $var in $numbers {
+    .grid-col-md-#{$var} {
+        @include tablet {
+            grid-template-columns: repeat($var, 1fr);
+        }
+    }
+}
+
+@each $var in $numbers {
+    .grid-col-sm-#{$var} {
+        @include mobile {
+            grid-template-columns: repeat($var, 1fr);
+        }
+    }
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1345px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+
+    @include tablet {
+        padding: 0 20px;
+    }
+}
+
+.grid {
+    display: grid;
+}

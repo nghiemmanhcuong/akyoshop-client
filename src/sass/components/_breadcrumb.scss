@@ -1,0 +1,11 @@
+.breadcrumb {
+    padding: 15px 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-top: 1px solid #f0ecec;
+    border-bottom: 1px solid #f0ecec;
+
+    &__line {
+        margin: 0 10px;
+    }
+}
