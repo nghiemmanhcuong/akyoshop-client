@@ -12,6 +12,7 @@ const Routes = () => {
     return (
         <Switch>
             <Route path='/' exact component={Home} />
+            <Route path='/akyoshop/' exact component={Home} />
             <Route path='/product/:slug' exact component={Product} />
             <Route path='/catalog/:category' exact component={Catalog} />
             <Route path='/blog' exact component={Blog} />
