@@ -13,6 +13,10 @@ const userApi = {
         const url = `cart/delete/${id}`;
         return axiosClient.delete(url);
     },
+    deleteMany: () => {
+        const url = '/cart/delete-many';
+        return axiosClient.delete(url);
+    },
 };
 
 export default userApi;

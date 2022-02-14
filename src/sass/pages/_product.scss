@@ -7,6 +7,14 @@
     &-wrapper {
         gap: 50px;
         @include flex(flex-start, flex-start);
+
+        @include desktop {
+            gap:20px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__img {
@@ -14,21 +22,42 @@
         gap: 20px;
         @include flex(flex-start, flex-start);
 
+        @include desktop {
+            gap:5px;
+            flex-direction: column;
+        }
+
         &__list {
             flex: 1;
             max-height: 877px;
             @include flex(flex-start, flex-start);
             flex-direction: column;
             overflow: hidden;
-            gap: 15px 0;
+            gap: 15px;
+
+            @include desktop {
+                gap:5px;
+                display:grid;
+                grid-template-columns: repeat(3,1fr);
+            }
 
             &__item {
                 min-height: calc($height-img / 3 - 10px);
                 border: 1px solid #e7e7e7;
                 cursor: pointer;
 
+                @include mobile {
+                    object-fit: contain;
+                    flex: 1;
+                    min-height: 100%;
+                }
+
                 &.active {
                     min-height: calc($height-img / 2 - 10px);
+
+                    @include mobile {
+                        min-height: 100%;
+                    }
                 }
             }
         }

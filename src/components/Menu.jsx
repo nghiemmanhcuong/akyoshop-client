@@ -1,4 +1,3 @@
-import {useEffect,useRef} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
 const menuNav = [
@@ -42,7 +41,7 @@ const Menu = (props) => {
                     </li>
                 ))}
                 <li className='menu__list__item mobile'>
-                    <Link to='/' className='menu__list__item__link'>
+                    <Link to={props.user.email ? '/cart' : '/login'} className='menu__list__item__link'>
                         Giỏ Hàng
                     </Link>
                 </li>

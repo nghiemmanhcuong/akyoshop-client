@@ -1,0 +1,31 @@
+.order-success {
+    text-align: center;
+    margin-top: 30px;
+
+    &__icon {
+        margin-bottom: 15px;
+    }
+
+    &__heading {
+        font-size: 2.4rem;
+        color: green;
+        margin-bottom: 10px;
+        text-transform:capitalize;
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+        max-width:600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        text-transform:capitalize;
+    }
+
+    a {
+        @include flex(center,center);
+        color: blue;
+        font-size: 1.5rem;
+        gap: 0 10px;
+    }
+}

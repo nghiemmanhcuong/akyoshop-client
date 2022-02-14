@@ -47,7 +47,7 @@ const Header = () => {
                         <span className='header__logo__title'>AKYO SHOP</span>
                     </Link>
                 </div>
-                <Menu active={menuActive} />
+                <Menu active={menuActive} user={user}/>
                 <div className='info'>
                     <div className='info__search__toggle' onClick={searchToggle}>
                         <BsSearch size={24} color='black' />

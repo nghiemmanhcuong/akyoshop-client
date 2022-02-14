@@ -17,7 +17,11 @@ const Toast = (props) => {
     }, [toastInfo]);
 
     return (
-        <div className={`toast ${active && 'active'} bg-${toastInfo.bg}`}>
+        <div
+            className={`toast ${active && 'active'} bg-${toastInfo.bg} ${
+                toastInfo.arrow ? 'arrow' : ''
+            }`}
+        >
             <h3 className='toast__title'>{toastInfo.title}</h3>
             <span className='toast__desc'>{toastInfo.desc}</span>
         </div>

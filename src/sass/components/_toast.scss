@@ -22,4 +22,15 @@
         right: 10px;
         opacity: 1;
     }
+
+    &.arrow {
+        left: -100%;
+        width: 200px;
+
+    }
+
+    &.active.arrow {
+        left: 10px;
+        opacity: 1;
+    }
 }

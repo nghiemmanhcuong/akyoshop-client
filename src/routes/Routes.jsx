@@ -7,12 +7,13 @@ import Catalog from '../pages/Catalog';
 import BlogDetail from '../pages/BlogDetail';
 import Login from '../pages/Login';
 import Cart from '../pages/Cart';
+import Payment from '../pages/Payment';
+import OrderSuccess from '../pages/OrderSuccess';
 
 const Routes = () => {
     return (
         <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/akyoshop/' exact component={Home} />
             <Route path='/product/:slug' exact component={Product} />
             <Route path='/catalog/:category' exact component={Catalog} />
             <Route path='/blog' exact component={Blog} />
@@ -20,6 +21,8 @@ const Routes = () => {
             <Route path='/contact' exact component={Contact} />
             <Route path='/login' exact component={Login} />
             <Route path='/cart' exact component={Cart} />
+            <Route path='/payment/:id' exact component={Payment} />
+            <Route path='/order-success' exact component={OrderSuccess} />
         </Switch>
     );
 };

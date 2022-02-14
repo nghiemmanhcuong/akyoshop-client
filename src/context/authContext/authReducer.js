@@ -1,4 +1,4 @@
-import {SET_AUTH} from '../constants';
+import {SET_AUTH,GET_CART} from '../constants';
 
 const authReducer = (state, action) => {
     const {type, payload} = action;
@@ -10,7 +10,6 @@ const authReducer = (state, action) => {
                 user: payload.user,
                 isAuthenticated: payload.isAuthenticated,
             };
-
         default:
             return state;
     }

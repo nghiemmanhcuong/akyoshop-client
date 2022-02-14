@@ -1,8 +1,9 @@
 import authApi from '../../api/authApi';
+import userApi from '../../api/userApi';
 import authReducer from './authReducer';
-import {createContext, useReducer,useEffect} from 'react';
+import {createContext, useReducer, useEffect} from 'react';
 import setAuthToken from '../../utils/setAuthToken';
-import {LOCAL_STORE_ACCESS_TOKEN,SET_AUTH} from '../constants';
+import {LOCAL_STORE_ACCESS_TOKEN, SET_AUTH, GET_CART} from '../constants';
 
 const INITIAL_STATE = {
     isAuthenticated: false,
@@ -65,13 +66,27 @@ const AuthContextProvider = ({children}) => {
         }
     };
 
+    // const getCart = async () => {
+    //     try {
+    //         const response = await userApi.getCart();
+    //         dispath({
+    //             type: GET_CART,
+    //             payload: response.data,
+    //         });
+    //     } catch (error) {
+    //         return error.response.data
+    //             ? error.response.data
+    //             : {success: false, message: 'Lỗi kết nối!'};
+    //     }
+    // };
+
     useEffect(() => {
-        if(localStorage.getItem(LOCAL_STORE_ACCESS_TOKEN)) {
+        if (localStorage.getItem(LOCAL_STORE_ACCESS_TOKEN)) {
             setLoginUser();
         }
-    },[])
+    }, []);
 
-    const authData = {authState, registerUser, loginUser,setLoginUser};
+    const authData = {authState, registerUser, loginUser, setLoginUser};
 
     return <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>;
 };
