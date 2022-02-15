@@ -102,7 +102,7 @@ const Login = () => {
                                 setValue={setLoginPassword}
                             />
                         </div>
-                        <Link to='/' className='login__form__forgot'>
+                        <Link to='/akyoshop/' className='login__form__forgot'>
                             Quên mật khẩu
                         </Link>
                         <LoginButton title='Đăng nhập' />
@@ -133,7 +133,7 @@ const Login = () => {
                             </label>
                             <label className='login__form__rules__group'>
                                 <input type='checkbox' />
-                                Tôi đồng ý với các <Link to='/'> điều khoản </Link> của NEM
+                                Tôi đồng ý với các <Link to='/akyoshop/'> điều khoản </Link> của NEM
                             </label>
                         </div>
                         <LoginButton title='Đăng Ký' />

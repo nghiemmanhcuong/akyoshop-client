@@ -36,14 +36,14 @@ const Blog = () => {
 
     return (
         <Helmet title='TIN TỨC'>
-            <Breadcrumb mainTitle='Tin Tức' mainPath='/blog' />
+            <Breadcrumb mainTitle='Tin Tức' mainPath='/akyoshop/blog' />
             <div className='blog'>
                 <div className='blog__header'>
-                    <Link to='/blog'>
+                    <Link to='/akyoshop/blog'>
                         <span className='blog__header__title'>XU HƯỚNG</span>
                     </Link>
                     <div className='blog__header__br'></div>
-                    <Link to='/'>
+                    <Link to='/akyoshop/'>
                         <span className='blog__header__title event'>XỰ KIỆN</span>
                     </Link>
                 </div>

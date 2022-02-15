@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
         <div className='card'>
             <div className='card__img'>
-                <Link to={`/product/${props.item.slug}`}>
+                <Link to={`/akyoshop/product/${props.item.slug}`}>
                     <img src={ps + props.item.img[0]} alt='' />
                     <div className='card__img__view'>
                         <div className='card__img__view__btn'>
@@ -19,13 +19,13 @@ const Card = (props) => {
             </div>
             <div className='card__content'>
                 <h3 className='card__content__name'>
-                    <Link to={`/product/${props.item.slug}`}>{props.item.name}</Link>
+                    <Link to={`/akyoshop/product/${props.item.slug}`}>{props.item.name}</Link>
                 </h3>
                 <div className='card__content__price'>
-                    <span>{numberWithComas(props.item.price)}</span>
+                    <span>{numberWithComas(props.item.price)}<u>đ</u></span>
                     {props.item.priceOld ? (
                         <del className='card__content__price__old'>
-                            {numberWithComas(props.item.priceOld)}
+                            {numberWithComas(props.item.priceOld)}đ
                         </del>
                     ) : null}
                 </div>

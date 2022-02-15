@@ -49,10 +49,10 @@ const Cart = () => {
                             <span>{numberWithComas(totalPrice)}đ</span>
                         </div>
                         <div className='cart__info__btn'>
-                            <Link to={`/payment/${cartList[0] ? cartList[0].userId : ''}`}>
+                            <Link to={`/akyoshop/payment/${cartList[0] ? cartList[0].userId : ''}`}>
                                 <button className='cart__info__btn__item'>Đặt Hàng</button>
                             </Link>
-                            <Link to='/catalog/shirst'>
+                            <Link to='/akyoshop/catalog/shirst'>
                                 <button className='cart__info__btn__item'>Tiếp tục mua hàng</button>
                             </Link>
                         </div>

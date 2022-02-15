@@ -1,53 +1,53 @@
 export const footerLink = [
     {
         display: 'Giới thiệu',
-        path: '/',
+        path: '/akyoshop/',
     },
     {
         display: 'AKYO\'s Blog',
-        path: '/blog',
+        path: '/akyoshop/blog',
     },
     {
         display: 'Tuyển dụng',
-        path: '/',
+        path: '/akyoshop/',
     },
     {
         display: 'Hệ thống showroom',
-        path: '/',
+        path: '/akyoshop/',
     },
     {
         display: 'Liên hệ',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
 ];
 
 export const footerCustomer = [
     {
         display: 'Chính sách giao nhận - Vận chuyển',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
     {
         display: 'Hướng dẫn thanh toán',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
     {
         display: 'Tra cứu đơn hàng',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
     {
         display: 'Hướng dẫn chọn Size',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
     {
         display: 'Quy định đổi hàng',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
     {
         display: 'Quy định bảo hành và sửa chữa',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
     {
         display: 'Khách hàng thân thiết',
-        path: '/contact',
+        path: '/akyoshop/contact',
     },
 ]

@@ -23,7 +23,7 @@ const HotSelection = () => {
 const HotSelectionItem = (props) => {
     return (
         <div className='hot-selection__item'>
-            <Link to='/'>
+            <Link to='/akyoshop/'>
                 <img src={props.img} alt='' />
                 <div className='hot-selection__item__content'>
                     <h3 className='hot-selection__item__content__title'>{props.title}</h3>

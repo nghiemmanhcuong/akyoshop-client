@@ -37,7 +37,7 @@ const HeroSlide = (props) => {
             </div>
             {dataImgs.map((item, index) => (
                 <div className={`hero-slide__item ${actice === index ? 'active' : ''}`} key={index}>
-                    <Link to='/'>
+                    <Link to='/akyoshop/'>
                         <img className='hero-slide__item__img' src={item} alt='' />
                     </Link>
                 </div>
