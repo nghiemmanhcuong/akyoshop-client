@@ -43,7 +43,7 @@ const Header = () => {
                     )}
                 </div>
                 <div className='header__logo'>
-                    <Link to='/akyoshop/'>
+                    <Link to='/'>
                         <span className='header__logo__title'>AKYO SHOP</span>
                     </Link>
                 </div>
@@ -54,12 +54,12 @@ const Header = () => {
                     </div>
                     <div className='info__search' ref={searchRef}>
                         <input type='text' placeholder='Tìm Kiếm' />
-                        <Link to='/akyoshop/' className='info__search__icon'>
+                        <Link to='/' className='info__search__icon'>
                             <BsSearch size={18} color='white' />
                         </Link>
                     </div>
                     <div className='info__item'>
-                        <Link to='/akyoshop/login' className='info__item__link'>
+                        <Link to='/login' className='info__item__link'>
                             <HiUserCircle size={20} />
                             <span className='info__item__link__title'>
                                 {user.lastName ? user.lastName : 'Tài Khoản'}
@@ -67,7 +67,7 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className='info__item'>
-                        <Link to={user.email ? '/akyoshop/cart' : '/akyoshop/login'} className='info__item__link'>
+                        <Link to={user.email ? '/cart' : '/login'} className='info__item__link'>
                             <BsFillCartCheckFill size={18} />
                             <span className='info__item__link__title'>Giỏ Hàng</span>
                         </Link>

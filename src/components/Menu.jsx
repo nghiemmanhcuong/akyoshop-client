@@ -3,23 +3,23 @@ import {Link, useLocation} from 'react-router-dom';
 const menuNav = [
     {
         display: 'trang chủ',
-        path: '/akyoshop/',
+        path: '/',
     },
     {
         display: 'quần nữ',
-        path: '/akyoshop/catalog/trouser',
+        path: '/catalog/trouser',
     },
     {
         display: 'áo nữ',
-        path: '/akyoshop/catalog/shirt',
+        path: '/catalog/shirt',
     },
     {
         display: 'blog',
-        path: '/akyoshop/blog',
+        path: '/blog',
     },
     {
         display: 'liên hệ',
-        path: '/akyoshop/contact',
+        path: '/contact',
     },
 ];
 
@@ -41,17 +41,17 @@ const Menu = (props) => {
                     </li>
                 ))}
                 <li className='menu__list__item mobile'>
-                    <Link to={props.user.email ? '/akyoshop/cart' : '/akyoshop/login'} className='menu__list__item__link'>
+                    <Link to={props.user.email ? '/cart' : '/login'} className='menu__list__item__link'>
                         Giỏ Hàng
                     </Link>
                 </li>
                 <li className='menu__list__item mobile'>
-                    <Link to='/akyoshop/login' className='menu__list__item__link'>
+                    <Link to='/login' className='menu__list__item__link'>
                         Đăng Nhập
                     </Link>
                 </li>
                 <li className='menu__list__item mobile'>
-                    <Link to='/akyoshop/login' className='menu__list__item__link'>
+                    <Link to='/login' className='menu__list__item__link'>
                         Đăng Ký
                     </Link>
                 </li>

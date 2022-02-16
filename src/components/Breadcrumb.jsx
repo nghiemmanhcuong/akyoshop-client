@@ -5,7 +5,7 @@ const Breadcrumb = (props) => {
     return (
         <div className='breadcrumb'>
             <div className='wrapper'>
-                <Link to='/akyoshop/'>Trang Chủ</Link>
+                <Link to='/'>Trang Chủ</Link>
                 <span className='breadcrumb__line'>|</span>
                 <Link to={props.mainPath ? props.mainPath : ''}>{props.mainTitle}</Link>
                 {props.subTitle ? <span className='breadcrumb__line'>|</span> : null}

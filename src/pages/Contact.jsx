@@ -20,7 +20,7 @@ const Contact = () => {
             </div>
             <Section>
                 <SectionBody>
-                    <form className='contact__form' onSubmit={() => console.log('ok')}>
+                    <form autocomplete='off' className='contact__form' onSubmit={() => console.log('ok')}>
                         <Grid col={2} smCol={1} gap={30}>
                             <div className='contact__help'>
                                 <div className='contact__help__header'>

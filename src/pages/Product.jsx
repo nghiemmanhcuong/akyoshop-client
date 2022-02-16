@@ -107,7 +107,7 @@ const Product = () => {
     return (
         <Helmet title={product.name ? product.name : ''}>
             <Toast toastInfo={toastInfo} />
-            <Breadcrumb mainTitle='Quần Nữ' mainPath='/akyoshop/catalog/trouser' subTitle={product.name} />
+            <Breadcrumb mainTitle='Quần Nữ' mainPath='/catalog/trouser' subTitle={product.name} />
             <div className='product'>
                 <div className='wrapper product-wrapper'>
                     <div className='product__img'>

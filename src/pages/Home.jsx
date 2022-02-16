@@ -79,7 +79,7 @@ const Home = () => {
             </Section>
             <Section>
                 <div className='home__banner'>
-                    <Link to='/akyoshop/'>
+                    <Link to='/'>
                         <img src={homeBanner} alt='' />
                     </Link>
                 </div>
@@ -123,7 +123,7 @@ export const BlogItem = (props) => {
     return (
         <div className='blog__item'>
             <div className='blog__item__img'>
-                <Link to={`/akyoshop/blog/${props.item.slug}`}>
+                <Link to={`/blog/${props.item.slug}`}>
                     <img src={ps + props.item.imgMain} alt='' />
                 </Link>
             </div>

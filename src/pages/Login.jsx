@@ -17,8 +17,8 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phoneNumber, setPhoneNumber] = useState(null);
-    const [firstName, setFirstName] = useState(null);
-    const [lastName, setLastName] = useState(null);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [toastInfo, setToastInfo] = useState({});
 
     const handleLoginUser = async (e) => {
@@ -30,6 +30,8 @@ const Login = () => {
                 const response = await loginUser({email: loginEmail, password: loginPassword});
                 if (response.success) {
                     setLoginUser();
+                    setLoginEmail('');
+                    setLoginPassword('');
                     History.push('/');
                 } else {
                     setToastInfo({
@@ -48,7 +50,12 @@ const Login = () => {
     const handleRegisterSubmit = async (e) => {
         e.preventDefault();
         if (!email || !password) {
-            alert('Missing email or password!');
+            setToastInfo({
+                active: true,
+                title: 'Vui Lòng Nhập Đầy Đủ Thông Tin Email Và Mật Khẩu!',
+                desc: '',
+                bg: 'red',
+            });
         } else {
             try {
                 const newUser = {
@@ -60,6 +67,11 @@ const Login = () => {
                 };
                 const response = await registerUser(newUser);
                 if (response.success) {
+                    setEmail('');
+                    setPassword('');
+                    setPhoneNumber('');
+                    setFirstName('');
+                    setLastName('');
                     setToastInfo({
                         active: true,
                         title: response.message,
@@ -86,7 +98,7 @@ const Login = () => {
             <Breadcrumb mainTitle='ĐĂNG NHẬP&amp;ĐĂNG KÝ' />
             <div className='login'>
                 <Grid col={2} mdCol={1} gap={30}>
-                    <form className='login__form' onSubmit={handleLoginUser}>
+                    <form autocomplete='off' className='login__form' onSubmit={handleLoginUser}>
                         <div className='login__form__header'>
                             <h4 className='login__form__header__title'>ĐĂNG NHẬP</h4>
                             <span className='login__form__header__desc'>
@@ -102,12 +114,12 @@ const Login = () => {
                                 setValue={setLoginPassword}
                             />
                         </div>
-                        <Link to='/akyoshop/' className='login__form__forgot'>
+                        <Link to='/' className='login__form__forgot'>
                             Quên mật khẩu
                         </Link>
                         <LoginButton title='Đăng nhập' />
                     </form>
-                    <form className='login__form' onSubmit={handleRegisterSubmit}>
+                    <form autocomplete='off' className='login__form' onSubmit={handleRegisterSubmit}>
                         <div className='login__form__header'>
                             <h4 className='login__form__header__title'>ĐĂNG KÝ</h4>
                             <span className='login__form__header__desc'>
@@ -133,7 +145,7 @@ const Login = () => {
                             </label>
                             <label className='login__form__rules__group'>
                                 <input type='checkbox' />
-                                Tôi đồng ý với các <Link to='/akyoshop/'> điều khoản </Link> của NEM
+                                Tôi đồng ý với các <Link to='/'> điều khoản </Link> của NEM
                             </label>
                         </div>
                         <LoginButton title='Đăng Ký' />

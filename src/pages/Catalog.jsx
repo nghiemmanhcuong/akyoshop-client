@@ -76,13 +76,13 @@ const Catalog = () => {
             )}
             {category === 'trouser' ? (
                 <div className='catalog__banner'>
-                    <Link to='/akyoshop/'>
+                    <Link to='/'>
                         <img src={catalogBanner2} alt='' />
                     </Link>
                 </div>
             ) : (
                 <div className='catalog__banner'>
-                    <Link to='/akyoshop/'>
+                    <Link to='/'>
                         <img src={catalogBanner1} alt='' />
                     </Link>
                 </div>
@@ -95,7 +95,7 @@ const Catalog = () => {
                             <ul className='catalog__category__list'>
                                 {categories.childrenName
                                     ? categories.childrenName.map((item, index) => (
-                                          <Link to={`/akyoshop/catalog/${item}`} key={index}>
+                                          <Link to={`/catalog/${item}`} key={index}>
                                               <li className='catalog__category__list__item'>
                                                   {item}
                                               </li>

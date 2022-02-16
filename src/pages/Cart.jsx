@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {FaRegTimesCircle} from 'react-icons/fa';
+import {HiArrowNarrowRight} from 'react-icons/hi';
 
 import Helmet from '../components/Helmet';
 import Breadcrumb from '../components/Breadcrumb';
@@ -39,30 +40,50 @@ const Cart = () => {
         <Helmet title='GIỎ HÀNG'>
             <Breadcrumb mainTitle='Giỏ Hàng' />
             <div className='wrapper'>
-                <div className='cart'>
-                    <div className='cart__info'>
-                        <h4 className='cart__info__title'>
-                            Bạn đang có <span>{cartList.length}</span> sản phẩm trong giỏ hàng
-                        </h4>
-                        <div className='cart__info__price'>
-                            <span>Thành Tiền</span>
-                            <span>{numberWithComas(totalPrice)}đ</span>
+                {cartList.length > 0 ? (
+                    <div className='cart'>
+                        <div className='cart__info'>
+                            <h4 className='cart__info__title'>
+                                Bạn đang có <span>{cartList.length}</span> sản phẩm trong giỏ hàng
+                            </h4>
+                            <div className='cart__info__price'>
+                                <span>Thành Tiền</span>
+                                <span>{numberWithComas(totalPrice)}đ</span>
+                            </div>
+                            <div className='cart__info__btn'>
+                                <Link
+                                    to={`/payment/${
+                                        cartList[0] ? cartList[0].userId : ''
+                                    }`}
+                                >
+                                    <button className='cart__info__btn__item'>Đặt Hàng</button>
+                                </Link>
+                                <Link to='/catalog/shirst'>
+                                    <button className='cart__info__btn__item'>
+                                        Tiếp tục mua hàng
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
-                        <div className='cart__info__btn'>
-                            <Link to={`/akyoshop/payment/${cartList[0] ? cartList[0].userId : ''}`}>
-                                <button className='cart__info__btn__item'>Đặt Hàng</button>
-                            </Link>
-                            <Link to='/akyoshop/catalog/shirst'>
-                                <button className='cart__info__btn__item'>Tiếp tục mua hàng</button>
-                            </Link>
+                        <div className='cart__list'>
+                            {cartList.map((item, index) => (
+                                <CartItem item={item} key={index} delete={handleDeleteCart} />
+                            ))}
                         </div>
                     </div>
-                    <div className='cart__list'>
-                        {cartList.map((item, index) => (
-                            <CartItem item={item} key={index} delete={handleDeleteCart}/>
-                        ))}
+                ) : (
+                    <div className='cart__empty'>
+                        <h2 className='cart__empty__title'>
+                            Bạn Chưa có sản phẩm nào trong giỏ hàng
+                        </h2>
+                        <Link to='/' className='cart__empty__link'>
+                            Nhấn Vào Đây Để Mua Hàng
+                            <div className='cart__empty__link__icon'>
+                                <HiArrowNarrowRight size={22}/>
+                            </div>
+                        </Link>
                     </div>
-                </div>
+                )}
             </div>
         </Helmet>
     );
@@ -74,10 +95,7 @@ const CartItem = (props) => {
 
     return (
         <div className='cart__item'>
-            <div
-                className='cart__item__delete'
-                onClick={props.delete.bind(this, props.item._id)}
-            >
+            <div className='cart__item__delete' onClick={props.delete.bind(this, props.item._id)}>
                 <FaRegTimesCircle size={22} />
             </div>
             <div className='cart__item__img'>

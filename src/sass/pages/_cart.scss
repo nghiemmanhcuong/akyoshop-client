@@ -11,6 +11,34 @@
         flex-direction: column;
     }
 
+    &__empty {
+        text-align: center;
+        margin-top: 50px;
+
+        &__title {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        &__link {
+            @include flex(center,center);
+            font-size: 1.8rem;
+            color: #0000ff;
+
+            &__icon {
+                margin-left: 5px;
+                @include flex(center,unset);
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                .cart__empty__link__icon {
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+
     &__info {
         flex: 1;
         padding: 15px;
