@@ -71,14 +71,14 @@ const Payment = () => {
                     <div className='payment'>
                         <div className='payment__info'>
                             <div className='payment__info__logo'>
-                                <Link to='/'>
+                                <Link to='/akyoshop/'>
                                     <span className='payment__info__logo__title'>AKYO SHOP</span>
                                 </Link>
                             </div>
                             <div className='payment__info__steps'>
-                                <Link to='/cart'>Giỏ Hàng</Link>
+                                <Link to='/akyoshop/cart'>Giỏ Hàng</Link>
                                 <IoIosArrowForward />
-                                <Link to='/payment'>Thông Tin Vận Chuyển</Link>
+                                <Link to='/akyoshop/payment'>Thông Tin Vận Chuyển</Link>
                             </div>
                             <h3 className='payment__info__title'>Thông tin thanh toán</h3>
                             <form className='payment__info__form'>
@@ -104,7 +104,7 @@ const Payment = () => {
                                 />
                             </form>
                             <div className='payment__info__button'>
-                                <Link to='/cart'>Giỏ hàng</Link>
+                                <Link to='/akyoshop/cart'>Giỏ hàng</Link>
                                 <button onClick={handleOrder}>Đặt Hàng</button>
                             </div>
                         </div>

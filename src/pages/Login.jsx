@@ -114,7 +114,7 @@ const Login = () => {
                                 setValue={setLoginPassword}
                             />
                         </div>
-                        <Link to='/' className='login__form__forgot'>
+                        <Link to='/akyoshop/' className='login__form__forgot'>
                             Quên mật khẩu
                         </Link>
                         <LoginButton title='Đăng nhập' />

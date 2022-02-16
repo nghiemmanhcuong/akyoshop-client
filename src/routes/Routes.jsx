@@ -14,16 +14,16 @@ const Routes = () => {
     return (
         <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/' exact component={Home} />
-            <Route path='/product/:slug' exact component={Product} />
-            <Route path='/catalog/:category' exact component={Catalog} />
-            <Route path='/blog' exact component={Blog} />
-            <Route path='/blog/:slug' component={BlogDetail} />
-            <Route path='/contact' exact component={Contact} />
-            <Route path='/login' exact component={Login} />
-            <Route path='/cart' exact component={Cart} />
-            <Route path='/payment/:id' exact component={Payment} />
-            <Route path='/order-success' exact component={OrderSuccess} />
+            <Route path='/akyoshop/' exact component={Home} />
+            <Route path='/akyoshop/product/:slug' exact component={Product} />
+            <Route path='/akyoshop/catalog/:category' exact component={Catalog} />
+            <Route path='/akyoshop/blog' exact component={Blog} />
+            <Route path='/akyoshop/blog/:slug' component={BlogDetail} />
+            <Route path='/akyoshop/contact' exact component={Contact} />
+            <Route path='/akyoshop/login' exact component={Login} />
+            <Route path='/akyoshop/cart' exact component={Cart} />
+            <Route path='/akyoshop/payment/:id' exact component={Payment} />
+            <Route path='/akyoshop/order-success' exact component={OrderSuccess} />
         </Switch>
     );
 };

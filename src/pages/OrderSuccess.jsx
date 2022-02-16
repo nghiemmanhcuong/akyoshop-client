@@ -15,7 +15,7 @@ const OrderSuccess = () => {
             <p className='order-success__desc'>
                 cảm ơn bạn đã tin tưởng dịch vụ của chúng tôi chúc quý khách mua hàng vui vẻ
             </p>
-            <Link to='/'>
+            <Link to='/akyoshop/'>
                 <BsArrowLeft size={20}/>
                 Về Trang Chủ
             </Link>
